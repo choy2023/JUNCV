@@ -1,0 +1,30 @@
+.personal-info {
+    font-size: 1rem;
+  }
+  
+  .personal-info-item {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+    
+    transform-origin: left center; 
+  }
+  
+  .icon {
+    margin-right: 1rem;
+  }
+  
+  .personal-info-item:hover {
+    transform: scale(1.02); 
+  }
+
+.personal-info-item p a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.personal-info-item p a:hover {
+  color: #C00000;
+  text-decoration: underline;
+}

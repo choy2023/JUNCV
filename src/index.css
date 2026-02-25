@@ -1,0 +1,100 @@
+body {
+  font-family: Calibri;
+  margin: 0;
+}
+
+.cv-container {
+  transform: scale(0.9);
+  transform-origin: top center;
+  transition: transform 0.3s ease-out;
+}
+
+h1,
+h2 {
+  margin-top: 1.2em; 
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid black;
+  font-weight: 400;
+  color: #C00000;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    min-width: 650px;
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-bottom: 1in;
+  }
+  
+  .cv-container {
+    transform: scale(1);
+  }
+}
+
+.print-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #C00000;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.print-btn:hover {
+  background-color: #a00000;
+  transform: scale(1.1);
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white;
+  }
+
+  .cv-container {
+    transform: scale(1) !important; 
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+    display: block;
+    height: 0;
+    margin: 0;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+}
